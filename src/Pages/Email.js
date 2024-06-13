@@ -1,7 +1,7 @@
-import { useCallback, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 import { Templates } from "../HTMLtemplates/Templates";
 import parse from "html-react-parser";
-import * as htmlToImage from "html-to-image";
+
 import { toPng } from 'html-to-image';
 
 export const Email = () => {
