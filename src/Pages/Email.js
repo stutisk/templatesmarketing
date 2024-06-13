@@ -250,7 +250,7 @@ export const Email = () => {
           </div>
         </form>
       </div>
-      <div  className= {` ${!downloadClicked ? 'image-container' : ''} md:col-span-6 bg-gray-100 ` } ref={elementRef} >
+      <div  className= {` ${!downloadClicked ? 'image-container' : ''} md:col-span-5 bg-gray-100 ` } ref={elementRef} >
       {parse(generateDynamicTemplate())}
       </div>
     </div>
