@@ -16,7 +16,7 @@ export const Email = () => {
   const elementRef = useRef(null);
   const generateDynamicTemplate = () => {
     let FinalTemplate = templates
-      .replace("Earn upto 14% IRR<br/>in 62 days", primaryText)
+      .replace("Earn upto 14% IRR in 62 days", primaryText)
       .replace("with a new Invoice Discounting Deal", secondaryText)
       .replace("Read More", buttontext)
       .replace("https://via.placeholder.com/1080x1299", imageUrl)
