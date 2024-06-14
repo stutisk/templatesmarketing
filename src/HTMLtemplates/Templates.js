@@ -17,10 +17,9 @@
 //   </div>`
 // }
 
-
 export const Templates = {
-  template1:`<div class="Slide16915" style="scale: 50%
-;width: 1080px; height: 1299px; background: linear-gradient(0deg, black 0%, black 100%); background: url(https://via.placeholder.com/1080x1299) center center/contain; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+  template1: `<div class="Slide16915" style="
+width: 1080px; height: 1299px; background: linear-gradient(0deg, black 0%, black 100%); background: url(https://via.placeholder.com/1080x1299) center center/contain; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
   <div class="Middle" style="align-self: stretch; flex: 1 1 0; padding: 48px; flex-direction: column; justify-content: flex-end; align-items: center; gap: 180px; display: flex">
     <img class="Logo" style="width: 176.50px; height: 77.50px" src="https://via.placeholder.com/176x77" />
   </div>
@@ -37,7 +36,5 @@ export const Templates = {
       </div>
     </div>
   </div>
-</div>`
-}
-
-
+</div>`,
+};
