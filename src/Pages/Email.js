@@ -258,8 +258,8 @@ useEffect(() => {
       </div>
       <div
         className={` ${
-          !downloadClicked ? "image-container" : ""
-        } md:col-span-5 bg-gray-100 `}
+          !downloadClicked ? "image-container w-[1080px] h-[1299px]" : "w-[1080px] h-[1299px]"
+        } `}
         ref={elementRef}
       >
         {parse(generateDynamicTemplate())}
