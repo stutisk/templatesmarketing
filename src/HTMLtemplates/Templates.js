@@ -24,7 +24,7 @@ export const Templates = {
     </div>
     <div class="Middle" style="align-self: stretch; flex: 1 1 0; padding-left: 120px; padding-right: 120px; padding-top: 48px; padding-bottom: 48px; flex-direction: column; justify-content: center; align-items: center; gap: 180px; display: flex">
       <div class="Frame1116602857" style="align-self: stretch; height: 316px; flex-direction: column; justify-content: center; align-items: center; gap: 36px; display: flex">
-        <div class="PrimaryText" style="align-self: stretch; text-align: center; color: white; font-size: 82.06px; font-family: Inter; font-weight: 600; line-height: 118.99px; word-wrap: break-word">Earn upto 14% IRR in 62 days</div>
+        <div class="PrimaryText" style="align-self: stretch; text-align: center; color: white; font-size: 82.06px;letter-spacing:-4.103px; font-family: Inter; font-weight: 600; line-height: 118.99px; word-wrap: break-word">Earn upto 14% IRR in 62 days</div>
         <div class="SecondaryText" style="text-align: center; color: white; font-size: 29.99px; font-family: Inter; font-weight: 400; line-height: 41.98px; word-wrap: break-word">with a new Invoice Discounting Deal</div>
       </div>
     </div>
