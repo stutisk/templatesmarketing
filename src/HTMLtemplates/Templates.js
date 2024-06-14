@@ -29,7 +29,7 @@ export const Templates = {
       </div>
     </div>
     <div class="Middle" style="align-self: stretch; flex: 1 1 0; padding: 48px; flex-direction: column; justify-content: center; align-items: center; gap: 180px; display: flex">
-      <div class="Button" style="padding-left: 47.69px; padding-right: 47.69px; padding-top: 33.17px; padding-bottom: 33.17px; background: white; box-shadow: 0px 2.6228957176208496px 4.292011260986328px -0.7153352499008179px rgba(0, 0, 0, 0.10); border-radius: 1380.52px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
+      <div class="Button" style="padding-left: 47.69px; padding-right: 47.69px; padding-top: 28.17px; padding-bottom: 28.17px; background: white; box-shadow: 0px 2.6228957176208496px 4.292011260986328px -0.7153352499008179px rgba(0, 0, 0, 0.10); border-radius: 1380.52px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
         <div class="TextLayer" style="padding-left: 19.08px; padding-right: 19.08px; justify-content: center; align-items: center; gap: 23.84px; display: flex">
           <div class="ButtonText" style="color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Read More</div>
         </div>
