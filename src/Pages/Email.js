@@ -6,10 +6,12 @@ import { toPng } from "html-to-image";
 
 export const Email = () => {
   const templates = Templates.template1;
-  const [primaryText, setPrimaryText] = useState("");
-  const [secondaryText, setSecondaryText] = useState("");
+  const [primaryText, setPrimaryText] = useState("Enter Primary Text");
+  const [secondaryText, setSecondaryText] = useState("Enter Secondary Text");
   const [buttontext, setButtontext] = useState("");
-  const [imageUrl, setImageUrl] = useState(null);
+  const [imageUrl, setImageUrl] = useState(
+    "https://via.placeholder.com/1080x1299"
+  );
   const [logoimageUrl, setLogoimageUrl] = useState(null);
   const [downloadClicked, setDownloadClicked] = useState(false);
 
@@ -26,7 +28,6 @@ export const Email = () => {
   };
 
   const htmlToImageConvert = () => {
-    
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
         const link = document.createElement("a");
@@ -38,41 +39,12 @@ export const Email = () => {
         console.log(err);
       });
   };
-useEffect(() => {
- if(downloadClicked){
-    setDownloadClicked(false);
-    htmlToImageConvert();
- }
-}, [downloadClicked])
-
-  // const htmlToImageConvert = () => {
-  //     if (!elementRef.current) return;
-
-  //     // Wait for images to load
-  //     Promise.all([
-  //       loadImage(imageUrl),
-  //       loadImage(logoimageUrl)
-  //     ]).then(() => {
-  //       // Toggle class on image-container
-  //       setDownloadClicked(true);
-  //       // Convert element to image
-  //       toPng(elementRef.current, { cacheBust: false })
-  //         .then((dataUrl) => {
-  //           const link = document.createElement("a");
-  //           link.download = "my-image-name.png";
-  //           link.href = dataUrl;
-  //           link.click();
-  //           setDownloadClicked(false); // Reset download state after download
-  //         })
-  //         .catch((err) => {
-  //           console.error("Error generating image:", err);
-  //           setDownloadClicked(false); // Reset download state on error
-  //         });
-  //     }).catch((err) => {
-  //       console.error("Error loading images:", err);
-  //       setDownloadClicked(false); // Reset download state on error
-  //     });
-  //   };
+  useEffect(() => {
+    if (downloadClicked) {
+      setDownloadClicked(false);
+      htmlToImageConvert();
+    }
+  }, [downloadClicked]);
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -93,9 +65,9 @@ useEffect(() => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        const imageUrl = reader.result;
+        const imageUrl2 = reader.result;
         console.log(imageUrl);
-        setLogoimageUrl(imageUrl);
+        setLogoimageUrl(imageUrl2);
       };
       reader.readAsDataURL(file);
     }
@@ -103,15 +75,27 @@ useEffect(() => {
 
   return (
     <div class="grid grid-cols-1 md:grid-cols-6 ">
-      <div className="md:col-span-1 bg-gray-200  ">
+      <div className="md:col-span-2  ">
         <form>
+          <div className="flex justify-between m-8">
+            <div className="flex align-middle font-semibold uppercase">
+              Creative Template{" "}
+            </div>
+            <button
+              onClick={() => setDownloadClicked(true)}
+              type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              Download Image
+            </button>
+          </div>
           <div className="">
             <div>
               <label
                 for="first_name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
               >
-                Primary Text
+                Enter Primary Text
               </label>
               <input
                 type="text"
@@ -119,16 +103,16 @@ useEffect(() => {
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Primary Text"
                 required
-                value={primaryText}
+                value={primaryText === "Enter Primary Text" ? "" : primaryText}
                 onChange={(e) => setPrimaryText(e.target.value)}
               />
             </div>
             <div>
               <label
                 for="first_name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
               >
-                Secondry Text
+                Enter Secondry Text
               </label>
               <input
                 type="text"
@@ -136,16 +120,18 @@ useEffect(() => {
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Secondry Text"
                 required
-                value={secondaryText}
+                value={
+                  secondaryText === "Enter Secondary Text" ? "" : secondaryText
+                }
                 onChange={(e) => setSecondaryText(e.target.value)}
               />
             </div>
             <div>
               <label
                 for="first_name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
               >
-                Button Text
+                Enter Button Text
               </label>
               <input
                 type="text"
@@ -158,16 +144,16 @@ useEffect(() => {
               />
             </div>
             <div>
-            <label
+              <label
                 for="first_name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
               >
-               Upload Background Image
+                Upload Background Image
               </label>
               <div class="flex items-center justify-center w-full">
                 <label
                   for="dropzone-file-main"
-                  class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                  class="flex flex-col items-center justify-center w-full  border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
                 >
                   <div class="flex flex-col items-center justify-center pt-5 pb-6">
                     <svg
@@ -186,8 +172,8 @@ useEffect(() => {
                       />
                     </svg>
                     <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                      <span class="font-semibold">Click to upload </span> or drag
-                      and drop
+                      <span class="font-semibold">Click to upload </span> or
+                      drag and drop
                     </p>
                     <p class="text-xs text-gray-500 dark:text-gray-400">
                       SVG, PNG, JPG or GIF (MAX. 800x400px)
@@ -202,16 +188,16 @@ useEffect(() => {
                 </label>
               </div>
 
-              <div class="flex items-center justify-center w-full ">
               <label
                 for="first_name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
               >
-               Upload Logo Image
+                Upload Logo Image
               </label>
+              <div class="flex items-center justify-center w-full ">
                 <label
                   for="dropzone-file-logo"
-                  class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                  class="flex flex-col items-center justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
                 >
                   <div class="flex flex-col items-center justify-center pt-5 pb-6">
                     <svg
@@ -246,19 +232,14 @@ useEffect(() => {
                 </label>
               </div>
             </div>
-            <button
-              onClick={()=>setDownloadClicked(true)}
-              type="button"
-              class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              Download Image
-            </button>
           </div>
         </form>
       </div>
       <div
         className={` ${
-          !downloadClicked ? "image-container w-[1080px] h-[1299px]" : "w-[1080px] h-[1299px]"
+          !downloadClicked
+            ? "image-container w-[1080px] h-[1299px]"
+            : "w-[1080px] h-[1299px]"
         } `}
         ref={elementRef}
       >
