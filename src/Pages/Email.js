@@ -8,7 +8,7 @@ export const Email = () => {
   const templates = Templates.template1;
   const [primaryText, setPrimaryText] = useState("Enter Primary Text");
   const [secondaryText, setSecondaryText] = useState("Enter Secondary Text");
-  const [buttontext, setButtontext] = useState("");
+  const [buttontext, setButtontext] = useState("Enter Button Text");
   const [imageUrl, setImageUrl] = useState(
     "https://via.placeholder.com/1080x1299"
   );
@@ -89,7 +89,7 @@ export const Email = () => {
               Download Image
             </button>
           </div>
-          <div className="">
+          <div className="ml-3.5">
             <div>
               <label
                 for="first_name"
