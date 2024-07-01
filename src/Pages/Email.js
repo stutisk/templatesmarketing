@@ -74,7 +74,7 @@ export const Email = () => {
   };
 
   return (
-    <div class="grid grid-cols-1 md:grid-cols-6 ">
+    <div className="grid grid-cols-1 md:grid-cols-6 ">
       <div className="md:col-span-2  ">
         <form>
           <div className="flex justify-between m-8">
