@@ -1,6 +1,6 @@
 
 import  "./CardContainer.module.css";
-export const MultiCard = ({multiCardInvestment,multixirr, multitenure}) => {
+export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) => {
   return (
     <div
       className="DailyDealMulti"
@@ -14,7 +14,7 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure}) => {
         justifyContent: "flex-start",
         alignItems: "flex-start",
         display: "inline-flex",
-        width:"631px"
+        width: cards.length === 4 ? "448px" : "631px"
       }}
     >
       <div

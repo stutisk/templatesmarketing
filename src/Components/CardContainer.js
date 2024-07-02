@@ -34,7 +34,9 @@ export const CardContainer = ({
           multiCardInvestment={multiCardInvestment}
           minimumInvestment={
             minimumInvestments[parseInt(multiCardPosition) - 1]
+            
           }
+          cards={cards}
           
           multixirr={multixirr}
           multitenure={ multitenure}
