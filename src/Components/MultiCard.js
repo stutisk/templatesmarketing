@@ -25,11 +25,12 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
         className="Frame1171276190"
         style={{
           alignSelf: "stretch",
+          width:"100%",
           height: "204px",
           paddingTop: "50.51px",
           paddingBottom: "68.45px",
-          paddingLeft: "68.45px",
-          paddingRight: "68.45px",
+          paddingLeft: "40.45px",
+          paddingRight: "40.45px",
           background: "#14532D",
           borderRadius: "20.53px",
           justifyContent: "center",
@@ -60,7 +61,8 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
               
               textAlign: "center",
               color: "#F8FAFC",
-              fontSize: "34px",
+
+              fontSize: cards.length === 4 ? "30px":"34px",
               fontFamily: "Inter",
               fontWeight: "600",
               lineHeight: "44.20px",
