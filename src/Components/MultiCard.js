@@ -14,9 +14,13 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
         justifyContent: "flex-start",
         alignItems: "flex-start",
         display: "inline-flex",
-        width: cards.length === 4 ? "448px" : "631px"
+        width: cards.length === 2 ? '716px' : 
+        cards.length === 4 ? '448px' : 
+        '631px'
       }}
     >
+
+      {/* 2 : 716px ,  */}
       <div
         className="Frame1171276190"
         style={{
