@@ -51,3 +51,10 @@ transform: translateY(-120%);
 .image-container * {
   background-size: contain;
 }
+
+
+.imageContainerMulti{
+width: 180px;
+/* position: fixed;
+left: 500px; */
+}

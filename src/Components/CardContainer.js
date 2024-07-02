@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./CardContainer.module.css";
 import { MultiCard } from "./MultiCard";
 
@@ -9,8 +9,18 @@ export const CardContainer = ({
   multiCardPosition,
   multiCardInvestment,
   xirr,
-  logoImageUrl
+  logoImageUrl,
+  multiLogoImageUrl
 }) => {
+  const [currentDate, setCurrentDate] = useState("");
+  useEffect(() => {
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+    });
+    setCurrentDate(formattedDate);
+  }, []);
   const cards = [];
 
   for (let i = 0; i < parseInt(selectedValue); i++) {
@@ -23,6 +33,7 @@ export const CardContainer = ({
           minimumInvestment={
             minimumInvestments[parseInt(multiCardPosition) - 1]
           }
+          multiLogoImageUrl={multiLogoImageUrl}
         />
       );
     } else {
@@ -45,7 +56,7 @@ export const CardContainer = ({
               <div className={styles.Frame1116603263}>
                 <div className={styles.Xirr}>xirr</div>
               </div>
-              <div className={styles.XirrValue}>{xirr[i]}</div>
+              <div className={styles.XirrValue}>{xirr[i]}%</div>
             </div>
             <div className={styles.Frame1171276186}>
               <div className={styles.Frame1171276254}>
@@ -59,9 +70,7 @@ export const CardContainer = ({
                 <div className={styles.MinInvestment}>MIN INVESTMENT</div>
               </div>
               <div className={styles.MinInvestmentNumber}>
-            
-                {new Intl.NumberFormat('en-IN').format(minimumInvestments[i])}
-               
+                {new Intl.NumberFormat("en-IN").format(minimumInvestments[i])}
               </div>
             </div>
           </div>
@@ -77,7 +86,7 @@ export const CardContainer = ({
           <div className={styles.InvoiceDiscountingDeals}>
             Invoice Discounting Deals
           </div>
-          <div className={styles.June20}>June 20</div>
+          <div className={styles.June20}>{currentDate}</div>
         </div>
         <div
           className={`${styles.Body} ${

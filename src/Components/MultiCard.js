@@ -1,6 +1,6 @@
 
 import  "./CardContainer.module.css";
-export const MultiCard = () => {
+export const MultiCard = ({multiCardInvestment,multiLogoImageUrl}) => {
   return (
     <div
       className="DailyDealMulti"
@@ -21,7 +21,7 @@ export const MultiCard = () => {
         style={{
           alignSelf: "stretch",
           height: "204px",
-          paddingTop: "36.51px",
+          paddingTop: "50.51px",
           paddingBottom: "68.45px",
           paddingLeft: "68.45px",
           paddingRight: "68.45px",
@@ -46,13 +46,13 @@ export const MultiCard = () => {
           <img
             className="Image48501"
             style={{ width: "181.78px", height: "79.94px" }}
-            // src={imageUrl}
+            src="https://res.cloudinary.com/dyrrnmsdz/image/upload/v1719908554/Multi_ufeus5.svg"
             alt="Placeholder"
           />
           <div
             className="MultiInvoiceDiscounting"
             style={{
-              width: "410px",
+              
               textAlign: "center",
               color: "#F8FAFC",
               fontSize: "34px",
@@ -75,12 +75,14 @@ export const MultiCard = () => {
           boxShadow:
             "0px 10.267449378967285px 22.81655502319336px rgba(0, 0, 0, 0.09)",
           borderRadius: "20.53px",
-          overflow: "hidden",
+        
           border: "1.14px rgba(0, 0, 0, 0.08) solid",
           flexDirection: "column",
           justifyContent: "flex-start",
           alignItems: "center",
           display: "flex",
+          position:"relative",
+          bottom:"30px"
         }}
       >
         <div
@@ -248,7 +250,8 @@ export const MultiCard = () => {
               wordWrap: "break-word",
             }}
           >
-            500000
+             {new Intl.NumberFormat("en-IN").format(multiCardInvestment)}
+        
           </div>
         </div>
       </div>
