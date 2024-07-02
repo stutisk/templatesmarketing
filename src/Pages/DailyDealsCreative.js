@@ -18,7 +18,7 @@ export const DailyDealsCreative = () => {
   const [multiLogoImageUrl, setMultiLogoImageUrl] = useState(null);
   const [logoImageUrl, setLogoImageUrl] = useState([null, null, null]);
   const [multitenure, setMultiTenure] = useState("6");
-  const [tenure, setTenure] = useState("6");
+  const [tenure, setTenure] = useState("60");
   const elementRef = useRef(null);
 
   const htmlToImageConvert = () => {
@@ -51,6 +51,11 @@ export const DailyDealsCreative = () => {
     const updatedXirr = [...xirr];
     updatedXirr[index] = value;
     setXirr(updatedXirr);
+  };
+  const handleTenureChange = (index, value) => {
+    const updatedTenure = [...tenure];
+    updatedTenure[index] = value;
+    setTenure(updatedTenure);
   };
 
   const handleMultiInvestmentChange = (value) => {
@@ -273,6 +278,21 @@ export const DailyDealsCreative = () => {
                     value={xirr[index]}
                     onChange={(e) => handleXIRRChange(index, e.target.value)}
                   />
+                  <label
+                    htmlFor={`xirr${index}`}
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
+                  >
+                    Tenure
+                  </label>
+                  <input
+                    type="number"
+                    id={`tenure${index}`}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Tenure"
+                    required
+                    value={tenure[index]}
+                    onChange={(e) => handleTenureChange(index, e.target.value)}
+                  />
 
                   <label
                     htmlFor={`dropzone-file-logo-${index}`}
@@ -339,7 +359,7 @@ export const DailyDealsCreative = () => {
           showMulti={showMulti}
           multiCardPosition={multiCardPosition}
           multiCardInvestment={multiCardInvestment}
-         
+          tenure={tenure}
           multixirr={multixirr}
           multitenure={multitenure}
         />

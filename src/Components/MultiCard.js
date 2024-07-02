@@ -5,15 +5,16 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure}) => {
     <div
       className="DailyDealMulti"
       style={{
-        flex: "1 1 0",
+       
         alignSelf: "stretch",
         borderRadius: "20.53px",
         overflow: "hidden",
-        border: "31px rgba(177.76, 214.11, 191.16, 0.12) solid",
+        outline: "31px rgba(177.76, 214.11, 191.16, 0.12) solid",
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "flex-start",
         display: "inline-flex",
+        width:"631px"
       }}
     >
       <div
@@ -89,12 +90,12 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure}) => {
           className="Frame1171276253"
           style={{
             alignSelf: "stretch",
-            height: "170.53px",
+            height: "222.53px",
             paddingLeft: "15.64px",
             paddingRight: "15.64px",
             paddingTop: "32px",
             paddingBottom: "32px",
-            borderBottom: "1px rgba(0, 0, 0, 0.16) solid",
+           
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",

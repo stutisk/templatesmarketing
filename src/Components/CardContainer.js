@@ -10,9 +10,9 @@ export const CardContainer = ({
   multiCardInvestment,
   xirr,
   logoImageUrl,
-  multiLogoImageUrl,
+
   multixirr,
-  multitenure
+  multitenure,tenure
 }) => {
   const [currentDate, setCurrentDate] = useState("");
   useEffect(() => {
@@ -65,7 +65,7 @@ export const CardContainer = ({
             <div className={styles.Frame1171276186}>
               <div className={styles.Frame1171276254}>
                 <div className={styles.Frame1171276266}>
-                  <div className={styles.Days}>62 Days</div>
+                  <div className={styles.Days}>{tenure[i]} days</div>
                 </div>
               </div>
             </div>

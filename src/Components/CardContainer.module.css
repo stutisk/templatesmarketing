@@ -91,7 +91,7 @@
   .DailyDeal {
     flex: 1 1 0;
     align-self: stretch;
-    padding-top: 32px;
+   
     background: white;
     box-shadow: 0px 12px 26px rgba(84, 84, 84, 0.10);
     border-radius: 18px;
@@ -102,15 +102,21 @@
     gap: 32px;
     display: inline-flex;
   }
-  
+  /* width: 170.47px;
+  height: 76.37px; */
   .Frame1171276195 {
-    width: 180px;
-    height: 80px;
+    /* width: 631px; */
+    height: 107px;
     position: relative;
     background: white;
     border-radius: 7.15px;
     overflow: hidden;
-    border: 0.56px rgba(0, 0, 0, 0.08) solid;
+    padding-top: 25px;
+    margin-top: 21px;
+    display: flex;
+    justify-content: center;
+   
+ 
   }
   .Frame1171276195For2Cards{
     width: 268px;
@@ -118,11 +124,9 @@
   }
 
   .Image48499 {
-    width: 147.47px;
-    height: 34.37px;
-    left: 16.44px;
-    top: 23px;
-    position: absolute;
+    width: 182.47px;
+    height: 77.37px;
+   
   }
   
   .Frame1171276264 {
@@ -142,7 +146,7 @@
     padding-bottom: 32px;
     padding-left: 19.67px;
     padding-right: 19.67px;
-    border-bottom: 1px rgba(0, 0, 0, 0.16) solid;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
