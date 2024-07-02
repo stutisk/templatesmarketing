@@ -15,7 +15,7 @@ export const DailyDealsCreative = () => {
   const [showMulti, setShowMulti] = useState(false);
   const [multiCardPosition, setMultiCardPosition] = useState("1");
   const [multiCardInvestment, setMultiCardInvestment] = useState("50,000");
-  const [multiLogoImageUrl, setMultiLogoImageUrl] = useState(null);
+  
   const [logoImageUrl, setLogoImageUrl] = useState([null, null, null]);
   const [multitenure, setMultiTenure] = useState("6");
   const [tenure, setTenure] = useState("60");
