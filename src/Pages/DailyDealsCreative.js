@@ -11,13 +11,14 @@ export const DailyDealsCreative = () => {
     "50,000",
   ]);
   const [xirr, setXirr] = useState(["14", "14", "14"]);
-  
+  const [multixirr, setMultiXirr] = useState("14");
   const [showMulti, setShowMulti] = useState(false);
   const [multiCardPosition, setMultiCardPosition] = useState("1");
   const [multiCardInvestment, setMultiCardInvestment] = useState("50,000");
   const [multiLogoImageUrl, setMultiLogoImageUrl] = useState(null);
   const [logoImageUrl, setLogoImageUrl] = useState([null, null, null]);
-
+  const [multitenure, setMultiTenure] = useState("6");
+  const [tenure, setTenure] = useState("6");
   const elementRef = useRef(null);
 
   const htmlToImageConvert = () => {
@@ -59,6 +60,21 @@ export const DailyDealsCreative = () => {
     setMinimumInvestments(updatedInvestments);
   };
 
+  const handleMultiXirr = (value) => {
+    setMultiXirr(value);
+    const updatedXirr = [...multixirr];
+    updatedXirr[parseInt(multiCardPosition) - 1] = value;
+    setXirr(updatedXirr);
+  };
+
+  const handleMultiTenure = (value) => {
+    setMultiTenure(value);
+    const updatedTenure = [...multitenure];
+    updatedTenure[parseInt(multiCardPosition) - 1] = value;
+    setXirr(updatedTenure);
+  };
+
+
   const handleMultiCardPositionChange = (value) => {
     setMultiCardPosition(value);
     if (showMulti) {
@@ -82,18 +98,7 @@ export const DailyDealsCreative = () => {
     }
   };
 
-  const handleMultiLogoImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const imageUrl = reader.result;
-        setMultiLogoImageUrl(imageUrl);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
+ 
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-6">
@@ -192,49 +197,38 @@ export const DailyDealsCreative = () => {
                   value={multiCardInvestment}
                   onChange={(e) => handleMultiInvestmentChange(e.target.value)}
                 />
-                 <label
-                    htmlFor={`multicardlogo`}
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
-                  >
-                    Upload Logo Image for Multi
-                  </label>
-                  <div className="flex items-center justify-center w-full">
-                    <label
-                      htmlFor={`dropzone-file-logo`}
-                      className="flex flex-col items-center justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
-                    >
-                      <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                        <svg
-                          className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 20 16"
-                        >
-                          <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
-                          />
-                        </svg>
-                        <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                          <span className="font-semibold">Click to upload</span>{" "}
-                          or drag and drop
-                        </p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">
-                          SVG, PNG, JPG or GIF (MAX. 800x400px)
-                        </p>
-                      </div>
-                      <input
-                        id={`dropzone-file-logo`}
-                        type="file"
-                        className="hidden"
-                        onChange={handleMultiLogoImageUpload}
-                      />
-                    </label>
-                  </div>
+
+                <label
+                  htmlFor="multixirr"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
+                >
+                  Enter XIRR for Multi Card
+                </label>
+                <input
+                  type="number"
+                  id="multixirr"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="xirr"
+                  required
+                  value={multixirr}
+                  onChange={(e) => handleMultiXirr(e.target.value)}
+                />
+
+                <label
+                  htmlFor="multixirr"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
+                >
+                  Enter Tenure for Multi Card
+                </label>
+                <input
+                  type="number"
+                  id="multitenure"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="tenure"
+                  required
+                  value={multitenure}
+                  onChange={(e) => handleMultiTenure(e.target.value)}
+                />
               </div>
             </>
           )}
@@ -329,13 +323,15 @@ export const DailyDealsCreative = () => {
           })}
         </form>
       </div>
-      <div   className={` ${
+      <div
+        className={` ${
           !downloadClicked
             ? "image-container imageContainerMulti "
             : " w-[2533px] h-[1423px]"
-        } `}   ref={elementRef}>
+        } `}
+        ref={elementRef}
+      >
         <CardContainer
-          
           selectedValue={selectedValue}
           minimumInvestments={minimumInvestments}
           xirr={xirr}
@@ -343,7 +339,9 @@ export const DailyDealsCreative = () => {
           showMulti={showMulti}
           multiCardPosition={multiCardPosition}
           multiCardInvestment={multiCardInvestment}
-          multiLogoImageUrl={multiLogoImageUrl}
+         
+          multixirr={multixirr}
+          multitenure={multitenure}
         />
       </div>
     </div>

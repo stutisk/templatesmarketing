@@ -10,7 +10,9 @@ export const CardContainer = ({
   multiCardInvestment,
   xirr,
   logoImageUrl,
-  multiLogoImageUrl
+  multiLogoImageUrl,
+  multixirr,
+  multitenure
 }) => {
   const [currentDate, setCurrentDate] = useState("");
   useEffect(() => {
@@ -33,7 +35,9 @@ export const CardContainer = ({
           minimumInvestment={
             minimumInvestments[parseInt(multiCardPosition) - 1]
           }
-          multiLogoImageUrl={multiLogoImageUrl}
+          
+          multixirr={multixirr}
+          multitenure={ multitenure}
         />
       );
     } else {

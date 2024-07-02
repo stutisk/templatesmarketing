@@ -1,6 +1,6 @@
 
 import  "./CardContainer.module.css";
-export const MultiCard = ({multiCardInvestment,multiLogoImageUrl}) => {
+export const MultiCard = ({multiCardInvestment,multixirr, multitenure}) => {
   return (
     <div
       className="DailyDealMulti"
@@ -143,7 +143,7 @@ export const MultiCard = ({multiCardInvestment,multiLogoImageUrl}) => {
               wordWrap: "break-word",
             }}
           >
-         41%
+        {multixirr} %
           </div>
         </div>
         <div
@@ -190,7 +190,7 @@ export const MultiCard = ({multiCardInvestment,multiLogoImageUrl}) => {
                 wordWrap: "break-word",
               }}
             >
-             6 days
+              {multitenure} days
             </div>
           </div>
         </div>
