@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { toPng } from "html-to-image";
-import { CardContainer } from "../Components/CardContainer";
+
 import { StoryCardContainer } from "../Components/StoryCardContainer";
 
 export const StoryDealsCreative = () => {
@@ -16,7 +16,7 @@ export const StoryDealsCreative = () => {
   const [showMulti, setShowMulti] = useState(false);
   const [multiCardPosition, setMultiCardPosition] = useState("1");
   const [multiCardInvestment, setMultiCardInvestment] = useState("50,000");
-  
+
   const [logoImageUrl, setLogoImageUrl] = useState([null, null, null]);
   const [multitenure, setMultiTenure] = useState("6");
   const [tenure, setTenure] = useState("60");
@@ -80,7 +80,6 @@ export const StoryDealsCreative = () => {
     setXirr(updatedTenure);
   };
 
-
   const handleMultiCardPositionChange = (value) => {
     setMultiCardPosition(value);
     if (showMulti) {
@@ -103,8 +102,6 @@ export const StoryDealsCreative = () => {
       reader.readAsDataURL(file);
     }
   };
-
- 
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-6">
@@ -135,7 +132,6 @@ export const StoryDealsCreative = () => {
               <option value="4">4</option>
             </select>
           </div>
-         
 
           <div className="flex items-center mt-4">
             <label className="inline-flex items-center cursor-pointer">
