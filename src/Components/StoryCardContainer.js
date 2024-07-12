@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./CardContainer.module.css";
 import { MultiCard } from "./MultiCard";
 
-export const CardContainer = ({
+export const StoryCardContainer = ({
   selectedValue,
   minimumInvestments,
   showMulti,
@@ -12,7 +12,8 @@ export const CardContainer = ({
   logoImageUrl,
 
   multixirr,
-  multitenure,tenure
+  multitenure,
+  tenure,
 }) => {
   const [currentDate, setCurrentDate] = useState("");
   useEffect(() => {
@@ -27,25 +28,24 @@ export const CardContainer = ({
 
   for (let i = 0; i < parseInt(selectedValue); i++) {
     if (showMulti && i === parseInt(multiCardPosition) - 1) {
-     
       cards.push(
         <MultiCard
           key="multiCard"
           multiCardInvestment={multiCardInvestment}
           minimumInvestment={
             minimumInvestments[parseInt(multiCardPosition) - 1]
-            
           }
           cards={cards}
-          
           multixirr={multixirr}
-          multitenure={ multitenure}
+          multitenure={multitenure}
         />
       );
     } else {
-     
       cards.push(
-        <div key={i} className={styles.DailyDeal}>
+        <div
+          key={i}
+          className={`${styles.DailyDeal} ${styles.StoryDailyDeal}`}
+        >
           <div
             className={`${styles.Frame1171276195} ${
               selectedValue === "2" ? styles.Frame1171276195For2Cards : ""
@@ -86,35 +86,28 @@ export const CardContainer = ({
   }
 
   return (
-    <div className={styles.DailyDealsCreative}>
-      <div className={styles.MainFrame}>
-        <div className={styles.Header}>
-          <div className={styles.InvoiceDiscountingDeals}>
+    <div className={styles.StoryDailyDealsCreative}>
+      <div className={styles.StoryMainFrame}>
+        <div className={`${styles.Header} ${styles.StoryHeader}`}>
+          <div
+            className={`${styles.InvoiceDiscountingDeals} ${styles.StoryInvoiceDiscountingDeals}`}
+          >
             Invoice Discounting Deals
           </div>
           <div className={styles.June20}>{currentDate}</div>
         </div>
-        <div
-          className={`${styles.Body} ${
-            selectedValue === "2" ? styles.BodyFor2Cards : ""
-          }`}
-        >
+        <div className={`${styles.Body} ${styles.StoryBody}  ${
+              selectedValue === "2" ? styles.StoryBodyFor2 : styles.StoryBody
+            }`}>
           <div className={styles.AllDeals}>
             <div
-              className={`${styles.AllDealCards} ${
-                selectedValue === "2" ? styles.AllDealCardsFor2Cards : ""
-              }`}
+              className={`${styles.AllDealCards} ${styles.StoryAllDealCards}`}
             >
               {cards}
             </div>
           </div>
         </div>
       </div>
-
-      
     </div>
   );
-
-
-  
 };

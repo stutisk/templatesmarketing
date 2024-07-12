@@ -1,311 +1,348 @@
 .DailyDealsCreative {
-    width: 2533px;
-    height: 1423px;
-    background: url(https://res.cloudinary.com/dvbw8xujd/image/upload/v1719984320/oqiwjlq99u7gsqunppar.png);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    display: inline-flex;
-  }
-  
-  .MainFrame {
-    width: 2533px;
-    height: 1423px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-  }
-  
-  .Header {
-    width: 2533px;
-    padding-top: 80px;
-    padding-bottom: 78px;
-    padding-left: 150px;
-    padding-right: 150px;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    justify-content: space-between;
-    align-items: center;
-    display: inline-flex;
-  }
-  
-  .InvoiceDiscountingDeals {
-    color: white;
-    font-size: 90px;
-    font-family: Inter;
-    font-weight: 600;
-    line-height: 117px;
-    word-wrap: break-word;
-  }
-  
-  .June20 {
-    opacity: 0.80;
-    color: white;
-    font-size: 65px;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: 78px;
-    word-wrap: break-word;
-  }
-  
-  .Body {
-    height: 863px;
-    padding-top: 90px;
-    padding-bottom: 125px;
-    padding-left: 220px;
-    padding-right: 220px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    display: flex;
-  }
-  .BodyFor2Cards{
-    padding-left: 500px;
-    padding-right: 500px;
-  }
-  
-  .AllDeals {
-    height: 648px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 70px;
-    display: inline-flex;
-  }
-  
-  .AllDealCards {
-    width: 2093px;
-    align-self: stretch;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 100px;
-    display: flex;
-  }
-  
-  .AllDealCardsFor2Cards {
-    width: 1533px;
-  
-   
-  }
-  .DailyDeal {
-    flex: 1 1 0;
-    align-self: stretch;
-   
-    background: white;
-    box-shadow: 0px 12px 26px rgba(84, 84, 84, 0.10);
-    border-radius: 18px;
-    border: 10px rgba(177.76, 214.11, 191.16, 0.12) solid;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 32px;
-    display: inline-flex;
-  }
-  /* width: 170.47px;
-  height: 76.37px; */
-  .Frame1171276195 {
-    /* width: 631px; */
-    height: 107px;
-    position: relative;
-    background: white;
-    border-radius: 7.15px;
-    overflow: hidden;
-    padding-top: 25px;
-    margin-top: 21px;
-    display: flex;
-    justify-content: center;
-   
- 
-  }
-  .Frame1171276195For2Cards{
-    width: 268px;
-    height: 118px;
-  }
+  width: 2533px;
+  height: 1423px;
+  background: url(https://res.cloudinary.com/dvbw8xujd/image/upload/v1719984320/oqiwjlq99u7gsqunppar.png);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: inline-flex;
+}
 
-  .Image48499 {
-    width: 182.47px;
-    height: 77.37px;
-   
-  }
-  
-  .Frame1171276264 {
-    align-self: stretch;
-    height: 461.59px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    display: flex;
-  }
-  
-  .Frame1171276253 {
-    align-self: stretch;
-    height: 167.14px;
-    padding-top: 12px;
-    padding-bottom: 32px;
-    padding-left: 19.67px;
-    padding-right: 19.67px;
-    
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 19.67px;
-    display: flex;
-  }
-  
-  .Frame1116603263 {
-    align-self: stretch;
-    height: 42px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-  
-  .Xirr {
-    color: #a8a29e;
-    font-size: 30px;
-    font-family: Inter;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 42px;
-    letter-spacing: 1.40px;
-    word-wrap: break-word;
-  }
-  
-  .XirrValue {
-    align-self: stretch;
-    height: 61.47px;
-    text-align: center;
-    color: #15803d;
-    font-size: 76px;
-    font-family: Inter;
-    font-weight: 600;
-    line-height: 114px;
-    word-wrap: break-word;
-  }
-  
-  .Frame1171276186 {
-    align-self: stretch;
-    height: 96.77px;
-    padding-left: 19.67px;
-    padding-right: 19.67px;
-    padding-top: 9.84px;
-    padding-bottom: 9.84px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 19.67px;
-    display: flex;
-  }
-  
-  .Frame1171276254 {
-    align-self: stretch;
-    height: 77.10px;
-    padding-left: 19.67px;
-    padding-right: 19.67px;
-    padding-top: 9.84px;
-    padding-bottom: 9.84px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 19.67px;
-    display: flex;
-  }
-  
-  .Frame1171276266 {
-    width: 201px;
-    height: 57.43px;
-    padding-left: 17.67px;
-    padding-right: 17.67px;
-    padding-top: 11.78px;
-    padding-bottom: 11.78px;
-    background: #15803d;
-    border-radius: 20.62px;
-    justify-content: center;
-    align-items: center;
-    gap: 7.36px;
-    display: inline-flex;
-  }
-  
-  .Days {
-    color: white;
-    font-size: 30.29px;
-    font-family: Inter;
-    font-weight: 500;
-    line-height: 45.44px;
-    word-wrap: break-word;
-  }
-  
-  .Frame1171276252 {
-    align-self: stretch;
-    height: 149.67px;
-    padding-left: 19.67px;
-    padding-right: 19.67px;
-    padding-top: 9.84px;
-    padding-bottom: 9.84px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    display: flex;
-  }
-  
-  .MinInvestment {
-    color: #a8a29e;
-    font-size: 30px;
-    font-family: Inter;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 42px;
-    letter-spacing: 1.40px;
-    word-wrap: break-word;
-  }
-  
-  .MinInvestmentNumber {
-    align-self: stretch;
-    text-align: center;
-    color: #44403c;
-    font-size: 48px;
-    font-family: Inter;
-    font-weight: 600;
-    line-height: 72px;
-    word-wrap: break-word;
-  }
-  
-  .Footer {
-    padding-left: 154px;
-    padding-right: 154px;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    background: #fbfbf6;
-    box-shadow: 0px -4px 40px rgba(0, 0, 0, 0.12);
-    border-top: 20px #1d8200 solid;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 122px;
-    display: inline-flex;
-  }
-  
-  .Disclaimer {
-    width: 1447px;
-    opacity: 0.80;
-    color: #475569;
-    font-size: 22px;
-    font-family: Inter;
-    font-weight: 500;
-    line-height: 26.40px;
-    word-wrap: break-word;
-  }
-  
-  .Image48502 {
-    width: 240.50px;
-    height: 78px;
-  }
-  
-  .Image48503 {
-    width: 294px;
-    height: 87px;
-  }
-  
+.StoryDailyDealsCreative {
+  width: 1080px;
+  height: 1920px;
+  background: url(https://res.cloudinary.com/dvbw8xujd/image/upload/v1720699945/f2jugkreie96imkqosut.png);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: inline-flex;
+}
+.MainFrame {
+  width: 2533px;
+  height: 1423px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.StoryMainFrame {
+  width: 1080px;
+  height: 1920px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.Header {
+  width: 2533px;
+  padding-top: 80px;
+  padding-bottom: 78px;
+  padding-left: 150px;
+  padding-right: 150px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+
+.StoryHeader {
+  width: 1080px;
+  padding-left: 0px;
+  padding-right: 0px;
+  display: block;
+}
+.InvoiceDiscountingDeals {
+  color: white;
+  font-size: 90px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 117px;
+  word-wrap: break-word;
+}
+.StoryInvoiceDiscountingDeals{
+  font-size: 75px;
+}
+
+.June20 {
+  opacity: 0.8;
+  color: white;
+  font-size: 65px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 78px;
+  word-wrap: break-word;
+}
+
+.Body {
+  height: 863px;
+  padding-top: 90px;
+  padding-bottom: 125px;
+  padding-left: 220px;
+  padding-right: 220px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.StoryBody{
+  padding-top: 0px;
+}
+.StoryBodyFor2{
+  padding-top: 269px;
+}
+.BodyFor2Cards {
+  padding-left: 500px;
+  padding-right: 500px;
+}
+
+.AllDeals {
+  height: 648px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 70px;
+  display: inline-flex;
+}
+
+.AllDealCards {
+  width: 2093px;
+  align-self: stretch;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;
+  display: flex;
+}
+
+.StoryAllDealCards{
+  width: 872px;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  gap: 76px;
+}
+.AllDealCardsFor2Cards {
+  width: 1533px;
+}
+.DailyDeal {
+  flex: 1 1 0;
+  align-self: stretch;
+
+  background: white;
+  box-shadow: 0px 12px 26px rgba(84, 84, 84, 0.1);
+  border-radius: 18px;
+  border: 10px rgba(177.76, 214.11, 191.16, 0.12) solid;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  display: inline-flex;
+}
+
+
+.StoryDailyDeal{
+  flex: none;
+  width: 398px;
+}
+.Frame1171276195 {
+  /* width: 631px; */
+  height: 107px;
+  position: relative;
+  background: white;
+  border-radius: 7.15px;
+  overflow: hidden;
+  padding-top: 25px;
+  margin-top: 21px;
+  display: flex;
+  justify-content: center;
+}
+.Frame1171276195For2Cards {
+  width: 268px;
+  height: 118px;
+}
+
+.Image48499 {
+  width: 182.47px;
+  height: 77.37px;
+}
+
+.Frame1171276264 {
+  align-self: stretch;
+  height: 461.59px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  display: flex;
+}
+
+.Frame1171276253 {
+  align-self: stretch;
+  height: 167.14px;
+  padding-top: 12px;
+  padding-bottom: 32px;
+  padding-left: 19.67px;
+  padding-right: 19.67px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 19.67px;
+  display: flex;
+}
+
+.Frame1116603263 {
+  align-self: stretch;
+  height: 42px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Xirr {
+  color: #a8a29e;
+  font-size: 30px;
+  font-family: Inter;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 42px;
+  letter-spacing: 1.4px;
+  word-wrap: break-word;
+}
+
+.XirrValue {
+  align-self: stretch;
+  height: 61.47px;
+  text-align: center;
+  color: #15803d;
+  font-size: 76px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 114px;
+  word-wrap: break-word;
+}
+
+.Frame1171276186 {
+  align-self: stretch;
+  height: 96.77px;
+  padding-left: 19.67px;
+  padding-right: 19.67px;
+  padding-top: 9.84px;
+  padding-bottom: 9.84px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 19.67px;
+  display: flex;
+}
+
+.Frame1171276254 {
+  align-self: stretch;
+  height: 77.1px;
+  padding-left: 19.67px;
+  padding-right: 19.67px;
+  padding-top: 9.84px;
+  padding-bottom: 9.84px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 19.67px;
+  display: flex;
+}
+
+.Frame1171276266 {
+  width: 201px;
+  height: 57.43px;
+  padding-left: 17.67px;
+  padding-right: 17.67px;
+  padding-top: 11.78px;
+  padding-bottom: 11.78px;
+  background: #15803d;
+  border-radius: 20.62px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.36px;
+  display: inline-flex;
+}
+
+.Days {
+  color: white;
+  font-size: 30.29px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 45.44px;
+  word-wrap: break-word;
+}
+
+.Frame1171276252 {
+  align-self: stretch;
+  height: 149.67px;
+  padding-left: 19.67px;
+  padding-right: 19.67px;
+  padding-top: 9.84px;
+  padding-bottom: 9.84px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.MinInvestment {
+  color: #a8a29e;
+  font-size: 30px;
+  font-family: Inter;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 42px;
+  letter-spacing: 1.4px;
+  word-wrap: break-word;
+}
+
+.MinInvestmentNumber {
+  align-self: stretch;
+  text-align: center;
+  color: #44403c;
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 72px;
+  word-wrap: break-word;
+}
+
+.Footer {
+  padding-left: 154px;
+  padding-right: 154px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #fbfbf6;
+  box-shadow: 0px -4px 40px rgba(0, 0, 0, 0.12);
+  border-top: 20px #1d8200 solid;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 122px;
+  display: inline-flex;
+}
+
+.Disclaimer {
+  width: 1447px;
+  opacity: 0.8;
+  color: #475569;
+  font-size: 22px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 26.4px;
+  word-wrap: break-word;
+}
+
+.Image48502 {
+  width: 240.5px;
+  height: 78px;
+}
+
+.Image48503 {
+  width: 294px;
+  height: 87px;
+}
