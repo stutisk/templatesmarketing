@@ -101,7 +101,7 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
           display: "flex",
           position:"relative",
 
-          bottom:location.pathname === "/storyDeals" ?"2px": "30px"
+          bottom:location.pathname === "/storyDeals" ?"0px": "30px"
         }}
       >
         <div

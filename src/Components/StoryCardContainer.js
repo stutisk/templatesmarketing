@@ -42,10 +42,7 @@ export const StoryCardContainer = ({
       );
     } else {
       cards.push(
-        <div
-          key={i}
-          className={`${styles.DailyDeal} ${styles.StoryDailyDeal}`}
-        >
+        <div key={i} className={`${styles.DailyDeal} ${styles.StoryDailyDeal}`}>
           <div
             className={`${styles.Frame1171276195} ${
               selectedValue === "2" ? styles.Frame1171276195For2Cards : ""
@@ -57,10 +54,14 @@ export const StoryCardContainer = ({
               alt="Placeholder"
             />
           </div>
-          <div className={styles.Frame1171276264}>
+
+          <div  className={`${styles.Frame1171276264} ${styles.storyFrame1171276264}`}>
+            <div className={styles.Frame1116603263}>
+              <div className={` ${styles.storyLogoName} `}>Project Hero</div>
+            </div>
             <div className={styles.Frame1171276253}>
               <div className={styles.Frame1116603263}>
-                <div className={styles.Xirr}>xirr</div>
+                <div className={`${styles.Xirr} ${styles.storyXirr}`}>xirr</div>
               </div>
               <div className={styles.XirrValue}>{xirr[i]}%</div>
             </div>
@@ -96,9 +97,11 @@ export const StoryCardContainer = ({
           </div>
           <div className={styles.StoryDate}>{currentDate}</div>
         </div>
-        <div className={`${styles.Body} ${styles.StoryBody}  ${
-              selectedValue === "2" ? styles.StoryBodyFor2 : styles.StoryBody
-            }`}>
+        <div
+          className={`${styles.Body} ${styles.StoryBody}  ${
+            selectedValue === "2" ? styles.StoryBodyFor2 : styles.StoryBody
+          }`}
+        >
           <div className={styles.AllDeals}>
             <div
               className={`${styles.AllDealCards} ${styles.StoryAllDealCards}`}

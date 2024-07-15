@@ -155,7 +155,7 @@
 }
 .Frame1171276195 {
   /* width: 631px; */
-  /* height: 107px; */
+  height: 107px;
   position: relative;
   background: white;
   /* border-radius: 7.15px; */
@@ -184,7 +184,18 @@
   gap: 24px;
   display: flex;
 }
-
+.storyLogoName {
+  color: var(--stone-800, #292524);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.storyFrame1171276264 {
+  gap: 0px;
+}
 .Frame1171276253 {
   align-self: stretch;
   height: 167.14px;
@@ -198,6 +209,9 @@
   align-items: center;
   gap: 19.67px;
   display: flex;
+}
+.storyFrame1171276253 {
+  gap: 0px;
 }
 
 .Frame1116603263 {
@@ -220,6 +234,9 @@
   word-wrap: break-word;
 }
 
+.storyXirr {
+  font-size: 24px;
+}
 .XirrValue {
   align-self: stretch;
   height: 61.47px;
