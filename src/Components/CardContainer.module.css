@@ -1,7 +1,7 @@
 .DailyDealsCreative {
   width: 2533px;
   height: 1423px;
-  background: url(https://res.cloudinary.com/dvbw8xujd/image/upload/v1719984320/oqiwjlq99u7gsqunppar.png);
+  background: url(https://res.cloudinary.com/dvbw8xujd/image/upload/v1720783184/vdhkzwrj8ebllaujpxot.png);
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -35,8 +35,8 @@
 }
 .Header {
   width: 2533px;
-  padding-top: 80px;
-  padding-bottom: 78px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   padding-left: 150px;
   padding-right: 150px;
   border-top-left-radius: 14px;
@@ -60,7 +60,7 @@
   line-height: 117px;
   word-wrap: break-word;
 }
-.StoryInvoiceDiscountingDeals{
+.StoryInvoiceDiscountingDeals {
   font-size: 75px;
 }
 
@@ -72,6 +72,15 @@
   font-weight: 700;
   line-height: 78px;
   word-wrap: break-word;
+}
+.StoryDate {
+  color: var(--bg-white-0, #fff);
+  font-family: Inter;
+  font-size: 51px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 61.2px */
+  letter-spacing: -1.02px;
 }
 
 .Body {
@@ -87,10 +96,10 @@
   display: flex;
 }
 
-.StoryBody{
+.StoryBody {
   padding-top: 0px;
 }
-.StoryBodyFor2{
+.StoryBodyFor2 {
   padding-top: 269px;
 }
 .BodyFor2Cards {
@@ -115,10 +124,10 @@
   display: flex;
 }
 
-.StoryAllDealCards{
+.StoryAllDealCards {
   width: 872px;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   gap: 76px;
 }
@@ -140,17 +149,16 @@
   display: inline-flex;
 }
 
-
-.StoryDailyDeal{
+.StoryDailyDeal {
   flex: none;
   width: 398px;
 }
 .Frame1171276195 {
   /* width: 631px; */
-  height: 107px;
+  /* height: 107px; */
   position: relative;
   background: white;
-  border-radius: 7.15px;
+  /* border-radius: 7.15px; */
   overflow: hidden;
   padding-top: 25px;
   margin-top: 21px;
@@ -162,10 +170,10 @@
   height: 118px;
 }
 
-.Image48499 {
+/* .Image48499 {
   width: 182.47px;
   height: 77.37px;
-}
+} */
 
 .Frame1171276264 {
   align-self: stretch;

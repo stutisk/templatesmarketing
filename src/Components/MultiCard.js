@@ -1,6 +1,10 @@
 
+
 import  "./CardContainer.module.css";
+import { useLocation } from 'react-router-dom';
 export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) => {
+  const location = useLocation();
+  console.log(location.pathname)
   return (
     <div
       className="DailyDealMulti"
@@ -9,28 +13,33 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
         alignSelf: "stretch",
         borderRadius: "20.53px",
         overflow: "hidden",
-        outline: "31px rgba(177.76, 214.11, 191.16, 0.12) solid",
+
+        outline: location.pathname ==="/storyDeals" ?"12px rgba(177.76, 214.11, 191.16, 0.12) solid":"31px rgba(177.76, 214.11, 191.16, 0.12) solid",
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "flex-start",
         display: "inline-flex",
-        width: cards.length === 2 ? '716px' : 
-        cards.length === 4 ? '448px' : 
-        '631px'
+        width: cards.length === 2 && location.pathname !=="/storyDeals" ? '716px' : 
+        cards.length && location.pathname !=="/storyDeals" === 4 ? '448px' : 
+        location.pathname === "/storyDeals" ? "398px":
+        '631px',
+
+
       }}
     >
 
-      {/* 2 : 716px ,  */}
+      
       <div
         className="Frame1171276190"
         style={{
           alignSelf: "stretch",
           width:"100%",
           height: "204px",
-          paddingTop: "50.51px",
-          paddingBottom: "68.45px",
-          paddingLeft: "40.45px",
-          paddingRight: "40.45px",
+          padding:location.pathname === "/storyDeals" ? "0px":"50px 68px 40px 40px",
+          // paddingTop: "50.51px",
+          // paddingBottom: "68.45px",
+          // paddingLeft: "40.45px",
+          // paddingRight: "40.45px",
           background: "#14532D",
           borderRadius: "20.53px",
           justifyContent: "center",
@@ -62,7 +71,9 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
               textAlign: "center",
               color: "#F8FAFC",
 
-              fontSize: cards.length === 4 ? "30px":"34px",
+              fontSize: cards.length === 4 ? "30px":
+              location.pathname === "/storyDeals"? "30px":
+              "34px",
               fontFamily: "Inter",
               fontWeight: "600",
               lineHeight: "44.20px",
@@ -89,7 +100,8 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
           alignItems: "center",
           display: "flex",
           position:"relative",
-          bottom:"30px"
+
+          bottom:location.pathname === "/storyDeals" ?"2px": "30px"
         }}
       >
         <div

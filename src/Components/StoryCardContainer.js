@@ -94,7 +94,7 @@ export const StoryCardContainer = ({
           >
             Invoice Discounting Deals
           </div>
-          <div className={styles.June20}>{currentDate}</div>
+          <div className={styles.StoryDate}>{currentDate}</div>
         </div>
         <div className={`${styles.Body} ${styles.StoryBody}  ${
               selectedValue === "2" ? styles.StoryBodyFor2 : styles.StoryBody
