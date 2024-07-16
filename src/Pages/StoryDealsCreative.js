@@ -11,6 +11,11 @@ export const StoryDealsCreative = () => {
     "50,000",
     "50,000",
   ]);
+  const [companyName, setCompanyName] = useState([
+    "Project Hero",
+    "Project Hero",
+    "Project Hero",
+  ]);
   const [xirr, setXirr] = useState(["14", "14", "14"]);
   const [multixirr, setMultiXirr] = useState("14");
   const [showMulti, setShowMulti] = useState(false);
@@ -48,6 +53,13 @@ export const StoryDealsCreative = () => {
     setMinimumInvestments(updatedInvestments);
   };
 
+  const handleCompanyName = (index,value)=> {
+    const updatedCompanyName = [...companyName];
+    updatedCompanyName[index] = value;
+    setCompanyName(updatedCompanyName);
+
+    
+  }
   const handleXIRRChange = (index, value) => {
     const updatedXirr = [...xirr];
     updatedXirr[index] = value;
@@ -247,6 +259,24 @@ export const StoryDealsCreative = () => {
                   />
 
                   <label
+                    htmlFor={`companyName${index}`}
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
+                  >
+                   Company Name 
+                  </label>
+                  <input
+                    type="text"
+                    id={`companyName${index}`}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder=" Company Name "
+                    required
+                    value={companyName[index]}
+                    onChange={(e) =>
+                      handleCompanyName(index, e.target.value)
+                    }
+                  />
+
+                  <label
                     htmlFor={`xirr${index}`}
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
                   >
@@ -345,6 +375,7 @@ export const StoryDealsCreative = () => {
           tenure={tenure}
           multixirr={multixirr}
           multitenure={multitenure}
+          companyName={companyName}
         />
       </div>
     </div>

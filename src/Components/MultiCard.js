@@ -1,41 +1,50 @@
-
-
-import  "./CardContainer.module.css";
-import { useLocation } from 'react-router-dom';
-export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) => {
+import "./CardContainer.module.css";
+import { useLocation } from "react-router-dom";
+export const MultiCard = ({
+  multiCardInvestment,
+  multixirr,
+  multitenure,
+  cards,
+}) => {
   const location = useLocation();
-  console.log(location.pathname)
+  console.log(location.pathname);
   return (
     <div
       className="DailyDealMulti"
       style={{
-       
         alignSelf: "stretch",
         borderRadius: "20.53px",
         overflow: "hidden",
 
-        outline: location.pathname ==="/storyDeals" ?"12px rgba(177.76, 214.11, 191.16, 0.12) solid":"31px rgba(177.76, 214.11, 191.16, 0.12) solid",
+        outline:
+          location.pathname === "/storyDeals"
+            ? "12px rgba(177.76, 214.11, 191.16, 0.12) solid"
+            : "31px rgba(177.76, 214.11, 191.16, 0.12) solid",
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "flex-start",
         display: "inline-flex",
-        width: cards.length === 2 && location.pathname !=="/storyDeals" ? '716px' : 
-        cards.length && location.pathname !=="/storyDeals" === 4 ? '448px' : 
-        location.pathname === "/storyDeals" ? "398px":
-        '631px',
-
-
+        width:
+          cards.length === 2 && location.pathname !== "/storyDeals"
+            ? "716px"
+            : cards.length === 4 && location.pathname !== "/storyDeals"
+            ? "448px"
+            : location.pathname === "/storyDeals"
+            ? "398px"
+            : "631px",
+        height: location.pathname === "/storyDeals" && "575px",
       }}
     >
-
-      
       <div
         className="Frame1171276190"
         style={{
           alignSelf: "stretch",
-          width:"100%",
+          width: "100%",
           height: "204px",
-          padding:location.pathname === "/storyDeals" ? "0px":"50px 68px 40px 40px",
+          padding:
+            location.pathname === "/storyDeals"
+              ? "11px"
+              : "50px 68px 40px 40px",
           // paddingTop: "50.51px",
           // paddingBottom: "68.45px",
           // paddingLeft: "40.45px",
@@ -67,13 +76,15 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
           <div
             className="MultiInvoiceDiscounting"
             style={{
-              
               textAlign: "center",
               color: "#F8FAFC",
 
-              fontSize: cards.length === 4 ? "30px":
-              location.pathname === "/storyDeals"? "30px":
-              "34px",
+              fontSize:
+                cards.length === 4
+                  ? "30px"
+                  : location.pathname === "/storyDeals"
+                  ? "30px"
+                  : "34px",
               fontFamily: "Inter",
               fontWeight: "600",
               lineHeight: "44.20px",
@@ -93,27 +104,27 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
           boxShadow:
             "0px 10.267449378967285px 22.81655502319336px rgba(0, 0, 0, 0.09)",
           borderRadius: "20.53px",
-        
+
           border: "1.14px rgba(0, 0, 0, 0.08) solid",
           flexDirection: "column",
           justifyContent: "flex-start",
           alignItems: "center",
           display: "flex",
-          position:"relative",
+          position: "relative",
 
-          bottom:location.pathname === "/storyDeals" ?"0px": "30px"
+          bottom: location.pathname === "/storyDeals" ? "8px" : "30px",
         }}
       >
         <div
           className="Frame1171276253"
           style={{
             alignSelf: "stretch",
-            height: "222.53px",
+            height: location.pathname === "/storyDeals" ? "195px" : "222.53px",
             paddingLeft: "15.64px",
             paddingRight: "15.64px",
             paddingTop: "32px",
             paddingBottom: "32px",
-           
+
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
@@ -162,7 +173,7 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
               wordWrap: "break-word",
             }}
           >
-        {multixirr} %
+            {multixirr} %
           </div>
         </div>
         <div
@@ -269,8 +280,7 @@ export const MultiCard = ({multiCardInvestment,multixirr, multitenure,cards}) =>
               wordWrap: "break-word",
             }}
           >
-             {new Intl.NumberFormat("en-IN").format(multiCardInvestment)}
-        
+            {new Intl.NumberFormat("en-IN").format(multiCardInvestment)}
           </div>
         </div>
       </div>

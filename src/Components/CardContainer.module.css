@@ -78,7 +78,7 @@
   font-family: Inter;
   font-size: 51px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 120%; /* 61.2px */
   letter-spacing: -1.02px;
 }
@@ -130,6 +130,7 @@
   justify-content: center;
   align-items: center;
   gap: 76px;
+  height: 575px;
 }
 .AllDealCardsFor2Cards {
   width: 1533px;
@@ -152,6 +153,7 @@
 .StoryDailyDeal {
   flex: none;
   width: 398px;
+  height: 575px;
 }
 .Frame1171276195 {
   /* width: 631px; */
@@ -164,6 +166,10 @@
   margin-top: 21px;
   display: flex;
   justify-content: center;
+}
+.storyFrame1171276195{
+  padding-top: 0px;
+  margin-top: 0px;
 }
 .Frame1171276195For2Cards {
   width: 268px;
@@ -248,6 +254,9 @@
   line-height: 114px;
   word-wrap: break-word;
 }
+.storyXirrValue{
+  font-size: 68px;
+}
 
 .Frame1171276186 {
   align-self: stretch;
@@ -290,6 +299,9 @@
   align-items: center;
   gap: 7.36px;
   display: inline-flex;
+}
+.storyFrame1171276266{
+  height: 51.43px;
 }
 
 .Days {
@@ -335,6 +347,9 @@
   font-weight: 600;
   line-height: 72px;
   word-wrap: break-word;
+}
+.storyMinInvestmentNumbe{
+  font-size: 42px;
 }
 
 .Footer {

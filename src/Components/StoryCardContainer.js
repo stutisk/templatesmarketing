@@ -10,7 +10,7 @@ export const StoryCardContainer = ({
   multiCardInvestment,
   xirr,
   logoImageUrl,
-
+  companyName,
   multixirr,
   multitenure,
   tenure,
@@ -44,7 +44,7 @@ export const StoryCardContainer = ({
       cards.push(
         <div key={i} className={`${styles.DailyDeal} ${styles.StoryDailyDeal}`}>
           <div
-            className={`${styles.Frame1171276195} ${
+            className={`${styles.Frame1171276195}  ${styles.storyFrame1171276195}${
               selectedValue === "2" ? styles.Frame1171276195For2Cards : ""
             }`}
           >
@@ -55,19 +55,27 @@ export const StoryCardContainer = ({
             />
           </div>
 
-          <div  className={`${styles.Frame1171276264} ${styles.storyFrame1171276264}`}>
+          <div
+            className={`${styles.Frame1171276264} ${styles.storyFrame1171276264}`}
+          >
             <div className={styles.Frame1116603263}>
-              <div className={` ${styles.storyLogoName} `}>Project Hero</div>
+              <div className={` ${styles.storyLogoName} `}>
+                {companyName[i]}
+              </div>
             </div>
             <div className={styles.Frame1171276253}>
               <div className={styles.Frame1116603263}>
                 <div className={`${styles.Xirr} ${styles.storyXirr}`}>xirr</div>
               </div>
-              <div className={styles.XirrValue}>{xirr[i]}%</div>
+              <div className={`${styles.XirrValue} ${styles.storyXirrValue}`}>
+                {xirr[i]}%
+              </div>
             </div>
             <div className={styles.Frame1171276186}>
               <div className={styles.Frame1171276254}>
-                <div className={styles.Frame1171276266}>
+                <div
+                  className={`${styles.Frame1171276266} ${styles.storyFrame1171276266}`}
+                >
                   <div className={styles.Days}>{tenure[i]} days</div>
                 </div>
               </div>
@@ -76,7 +84,9 @@ export const StoryCardContainer = ({
               <div className={styles.Frame1116603263}>
                 <div className={styles.MinInvestment}>MIN INVESTMENT</div>
               </div>
-              <div className={styles.MinInvestmentNumber}>
+              <div
+                className={`${styles.MinInvestmentNumber} ${styles.storyMinInvestmentNumber}`}
+              >
                 {new Intl.NumberFormat("en-IN").format(minimumInvestments[i])}
               </div>
             </div>
@@ -98,8 +108,8 @@ export const StoryCardContainer = ({
           <div className={styles.StoryDate}>{currentDate}</div>
         </div>
         <div
-          className={`${styles.Body} ${styles.StoryBody}  ${
-            selectedValue === "2" ? styles.StoryBodyFor2 : styles.StoryBody
+          className={`${styles.Body}   ${
+            selectedValue === "2" && styles.StoryBodyFor2
           }`}
         >
           <div className={styles.AllDeals}>
