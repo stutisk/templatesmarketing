@@ -44,9 +44,9 @@ export const StoryCardContainer = ({
       cards.push(
         <div key={i} className={`${styles.DailyDeal} ${styles.StoryDailyDeal}`}>
           <div
-            className={`${styles.Frame1171276195}  ${styles.storyFrame1171276195}${
-              selectedValue === "2" ? styles.Frame1171276195For2Cards : ""
-            }`}
+            className={`${styles.Frame1171276195}  ${
+              styles.storyFrame1171276195
+            }${selectedValue === "2" ? styles.Frame1171276195For2Cards : ""}`}
           >
             <img
               className={styles.Image48499}
@@ -63,7 +63,10 @@ export const StoryCardContainer = ({
                 {companyName[i]}
               </div>
             </div>
-            <div className={styles.Frame1171276253}>
+
+            <div
+              className={`${styles.Frame1171276253} ${styles.storyFrame1171276253}`}
+            >
               <div className={styles.Frame1116603263}>
                 <div className={`${styles.Xirr} ${styles.storyXirr}`}>xirr</div>
               </div>

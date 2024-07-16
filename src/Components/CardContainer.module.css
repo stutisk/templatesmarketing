@@ -154,6 +154,7 @@
   flex: none;
   width: 398px;
   height: 575px;
+  gap: 5px;
 }
 .Frame1171276195 {
   /* width: 631px; */
@@ -168,7 +169,7 @@
   justify-content: center;
 }
 .storyFrame1171276195{
-  padding-top: 0px;
+  padding-top: 19px;
   margin-top: 0px;
 }
 .Frame1171276195For2Cards {

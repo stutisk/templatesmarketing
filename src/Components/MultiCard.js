@@ -119,7 +119,7 @@ export const MultiCard = ({
           className="Frame1171276253"
           style={{
             alignSelf: "stretch",
-            height: location.pathname === "/storyDeals" ? "195px" : "222.53px",
+            height: location.pathname === "/storyDeals" ? "178px" : "222.53px",
             paddingLeft: "15.64px",
             paddingRight: "15.64px",
             paddingTop: "32px",
@@ -128,7 +128,7 @@ export const MultiCard = ({
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            gap: "15.64px",
+            gap: location.pathname === "/storyDeals" ? "0": "15.64px",
             display: "flex",
           }}
         >
